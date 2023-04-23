@@ -37,13 +37,13 @@ A learning management and online assessment system for academic education.
 1. Clone the project
 
 ```bash
-git clone https://github.com/nz-m/eLMS-SWE.git
+git clone https://github.com/adityaharsh2001/classy.fi.git
 ```
 
 2. Go to the project directory
 
 ```bash
-cd eLMS-SWE
+cd classyfi
 ```
 
 3. Create a virtual environment and activate it (Windows)
@@ -98,4 +98,4 @@ Demo : https://youtu.be/NyL2ajUNxYk
 
 ## License
 
-[The MIT License (MIT)](https://github.com/nz-m/eLMS-SWE/blob/main/LICENCE)
+[The MIT License (MIT)](https://github.com/nz-m/classyfi-SWE/blob/main/LICENCE)
