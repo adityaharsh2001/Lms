@@ -7,6 +7,7 @@ ADD . /usr/src/app
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
+COPY . .
 
 # Get pip to download and install requirements:
 RUN pip install --no-cache-dir -r requirements.txt
