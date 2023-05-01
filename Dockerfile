@@ -1,19 +1,21 @@
 FROM python:3.9
+ENV MICRO_SERVICE=/user/src/app
 
-#add project files to the usr/src/app folder
-ADD . /usr/src/app
+RUN mkdir -p $MICRO_SERVICE
+RUN mkdir -p $MICRO_SERVICE/static
 
-#set directoty where CMD will execute 
-WORKDIR /usr/src/app
+WORKDIR $MICRO_SERVICE
 
-COPY requirements.txt ./
-COPY . .
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-# Get pip to download and install requirements:
+# install dependencies
+RUN pip install --upgrade pip
+
+COPY . $MICRO_SERVICE
+RUN pip install -r requirements.txt
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose ports
 EXPOSE 8000
-
-# default command to execute    
-CMD exec gunicorn classyfi.wsgi:application --bind 0.0.0.0:8000 --workers 3 

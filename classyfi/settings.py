@@ -35,12 +35,7 @@ CSRF_COOKIE_HTTPONLY = False
 SESSION_COOKIE_HTTPONLY = False
 SECURE_SSL_REDIRECT = False
 SECURE_PROXY_SSL_HEADER = None
-
 CSRF_TRUSTED_ORIGINS = ['https://*.geekyadi.dev', 'https://geekyadi.dev', 'http://localhost:3000', 'http://localhost:8000', 'http://localhost:1300' ]
-
-ALLOWED_HOSTS = ['*']
-
-
 # Application definition
 
 INSTALLED_APPS = [

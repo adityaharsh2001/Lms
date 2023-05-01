@@ -6,7 +6,7 @@ services:
     ports:
       - 1300:80
     volumes:
-      - static_volume:/usr/src/app
+      - static_volume:/usr/src/app/static
     depends_on:
       - web
     restart: "on-failure"
@@ -17,8 +17,9 @@ services:
                     python manage.py collectstatic --no-input &&
                     gunicorn classyfi.wsgi:application --bind 0.0.0.0:8000"
     volumes:
-      - .:/classyfi:rw # map data and files from parent directory in host to microservice directory in docker containe
-      - static_volume:/usr/src/app
+    # map data and files from parent directory in host to microservice directory in docker containe
+      - .:/usr/src/app
+      - static_volume:/usr/src/app/static
     env_file:
       - .env
     image: classyfi
