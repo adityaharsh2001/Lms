@@ -43,7 +43,7 @@ git clone https://github.com/adityaharsh2001/classy.fi.git
 2. Go to the project directory
 
 ```bash
-cd classyfi
+cd classy.fi
 ```
 
 3. Create a virtual environment and activate it (Windows)
